@@ -1,1 +1,1 @@
-# faculdade-peototipo
+# faculdade-prototipo

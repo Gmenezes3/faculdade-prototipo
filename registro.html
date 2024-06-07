@@ -62,7 +62,8 @@
                         <li id="dividerItem">
                             <hr class="dropdown-divider">
                         </li>
-                        <li id="logoutItem"><a class="dropdown-item" href="#">Logout</a></li>
+                        <li id="logoutItem"><a class="dropdown-item" href="#" onclick="fazerLogout()">Logout</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -141,7 +142,11 @@
                 <fieldset class="border p-4">
                     <legend class="w-auto px-2">Endereço</legend>
                     <div class="mb-3">
-                        <label for="rua" class="form-label">Rua</label>
+                        <div class="mb-3">
+                            <label for="cep" class="form-label">CEP</label>
+                            <input type="text" class="form-control" id="cep" name="cep" required>
+                        </div>
+                        <label for="logradouro" class="form-label">Logradouro</label>
                         <input type="text" class="form-control" id="rua" name="rua" required>
                     </div>
                     <div class="mb-3">
@@ -160,16 +165,15 @@
                         <label for="estado" class="form-label">Estado</label>
                         <input type="text" class="form-control" id="estado" name="estado" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="cep" class="form-label">CEP</label>
-                        <input type="text" class="form-control" id="cep" name="cep" required>
-                    </div>
                 </fieldset>
 
                 <button type="submit" class="btn btn-primary mt-4">Enviar</button>
             </form>
         </div>
     </main>
+
+    <div id="toast-registro" class="toast">Cadastro realizado com sucesso!</div>
+
     <footer>
 
     </footer>
@@ -183,11 +187,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <!--Javascript Biblioteca AOS via CDN-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <!--Meu Script personalizado-->
     <script src="assets/js/formatar.js"></script>
+    <script src="assets/js/cep.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

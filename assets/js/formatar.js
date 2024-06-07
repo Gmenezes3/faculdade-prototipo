@@ -11,24 +11,10 @@ document.getElementById('telefone_celular').addEventListener('input', function (
 });
 
 //FUNÇÃO PARA FORMATAR TELEFONE FIXO
-document.getElementById('telefone-fixo').addEventListener('input', function (e) {
+document.getElementById('telefone_fixo').addEventListener('input', function (e) {
     var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,4})(\d{0,4})/);
     e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
 });
-
-function validarEmail(email) {
-    // Expressão regular para verificar o formato do e-mail
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-}
-
-// Exemplo de uso:
-const email1 = 'usuario@example.com';
-const email2 = 'invalido@exemplo';
-
-console.log(validarEmail(email1)); // Saída esperada: true
-console.log(validarEmail(email2)); // Saída esperada: false
-
 
 //FUNÇÃO PARA VALIDAÇÃO DE CPF
 function isValidCPF(cpf) {

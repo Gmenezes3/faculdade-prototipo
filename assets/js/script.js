@@ -42,6 +42,26 @@ function fazerLogout() {
     window.location.href = "login.html"; // Redireciona para a página de login
 }
 
+// Função para exibir o toast de login bem-sucedido
+function mostrarToastLogin() {
+    var toast = document.getElementById("toast-login");
+    toast.innerText = "Login realizado com sucesso!";
+    toast.className = "toast show";
+    setTimeout(function() {
+        toast.className = toast.className.replace("show", "");
+    }, 3000);
+}
+
+// Função para exibir o toast de cadastro bem-sucedido
+function mostrarToastCadastro() {
+    var toast = document.getElementById("toast-registro");
+    toast.innerText = "Cadastro realizado com sucesso!";
+    toast.className = "toast show";
+    setTimeout(function() {
+        toast.className = toast.className.replace("show", "");
+    }, 3000);
+}
+
 // Chama a função para verificar o estado do login quando a página é carregada
 window.onload = function () {
     verificarLogin();

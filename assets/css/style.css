@@ -1,0 +1,38 @@
+/* Estilos para o toast de login */
+#toast-login {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff; /* Cor de fundo azul */
+    color: #fff; /* Cor do texto branco */
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#toast-login.show {
+    opacity: 1;
+}
+
+
+/* Estilos para o toast de cadastro */
+#toast-registro {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branco */
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#toast-registro.show {
+    opacity: 1;
+}

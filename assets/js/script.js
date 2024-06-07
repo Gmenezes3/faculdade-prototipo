@@ -4,12 +4,18 @@ function salvarCredenciais() {
     var senha = document.getElementById('senha').value;
 
     // Verifica se os campos não estão vazios
-    if (email && senha) {
+    if (email.trim() !== '' && senha.trim() !== '') {
         localStorage.setItem('email', email);
         localStorage.setItem('senha', senha);
 
-        // Redireciona para a tela de login
+        // Exibe o toast de cadastro bem-sucedido
+        mostrarToastCadastro();
+
+        // Redireciona para a tela de login após o cadastro
         window.location.href = "login.html";
+    } else {
+        // Exibe uma mensagem de erro se os campos estiverem vazios
+        alert("Por favor, preencha todos os campos.");
     }
 }
 
@@ -42,22 +48,22 @@ function fazerLogout() {
     window.location.href = "login.html"; // Redireciona para a página de login
 }
 
-// Função para exibir o toast de login bem-sucedido
+//Função para exibir o toast de login bem-sucedido
 function mostrarToastLogin() {
     var toast = document.getElementById("toast-login");
     toast.innerText = "Login realizado com sucesso!";
     toast.className = "toast show";
-    setTimeout(function() {
+    setTimeout(function () {
         toast.className = toast.className.replace("show", "");
     }, 3000);
 }
 
-// Função para exibir o toast de cadastro bem-sucedido
+//Função para exibir o toast de cadastro bem-sucedido
 function mostrarToastCadastro() {
     var toast = document.getElementById("toast-registro");
     toast.innerText = "Cadastro realizado com sucesso!";
     toast.className = "toast show";
-    setTimeout(function() {
+    setTimeout(function () {
         toast.className = toast.className.replace("show", "");
     }, 3000);
 }

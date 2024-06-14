@@ -87,7 +87,7 @@ document.getElementById('registroForm').addEventListener('submit', function (eve
     localStorage.setItem('senha', senha);
 
     // Exibir alerta de sucesso
-    alert('Dados armazenados no localStorage com sucesso!');
+    alert('Cadastro realizado com sucesso!');
 
     // Redirecionar para a página de login
     window.location.href = 'login.html';

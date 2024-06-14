@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
             "A DriveS resolve esse problema para você!"
         ],
         typeSpeed: 70,
-        backSpeed: 25,
+        backSpeed: 30,
         startDelay: 500,
-        backDelay: 1000,
+        backDelay: 2000,
         loop: false,
         showCursor: true,
         cursorChar: '|',

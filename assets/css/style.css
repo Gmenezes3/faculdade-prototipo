@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*IMPORTAÇÃO DAS FONTES ROBOTO E COURIER PRIME*/
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
 
 main {
     margin: 0;
@@ -31,9 +33,6 @@ video {
 }
 
 .texto {
-    font-family: 'Montserrat';
-    font-size: 1rem;
-    font-weight: 500;
     position: absolute;
     top: 0;
     left: 0;
@@ -47,8 +46,18 @@ video {
 }
 
 #typewriter-text {
+    font-family: 'Courier Prime';
+    font-size: 1.5rem;
+    font-style: oblique;
+    font-weight: 400;
     color: white;
     text-align: center;
-    font-size: 1.5em;
     /* Ajuste conforme necessário */
+}
+
+.typed-cursor {
+    color: #93C174;
+    background-color: #93C174;
+    font-size: 1.5rem;
+    width: 1rem;
 }

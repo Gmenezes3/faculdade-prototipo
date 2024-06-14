@@ -1,61 +1,94 @@
-// Função para salvar os campos de email e senha no LocalStorage
-function salvarCredenciais() {
-    var email = document.getElementById('email').value;
-    var senha = document.getElementById('senha').value;
+// Função para atualizar o dropdown baseado no estado de login
+function atualizarDropdown() {
+    var emailRegistrado = localStorage.getItem('email');
+    var senhaRegistrada = localStorage.getItem('senha');
+    var loggedIn = localStorage.getItem('loggedIn');
 
-    // Verifica se os campos não estão vazios
-    if (email.trim() !== '' && senha.trim() !== '') {
-        localStorage.setItem('email', email);
-        localStorage.setItem('senha', senha);
+    var loginItem = document.getElementById('loginItem');
+    var profileItem = document.getElementById('profileItem');
+    var settingsItem = document.getElementById('settingsItem');
+    var dividerItem = document.getElementById('dividerItem');
+    var logoutItem = document.getElementById('logoutItem');
+    var vagasNavItem = document.getElementById('vagasNavItem');
 
-        // Exibe o toast de cadastro bem-sucedido
-        mostrarToastCadastro();
-
-        // Redireciona para a tela de login após o cadastro
-        window.location.href = "login.html";
+    if (emailRegistrado && senhaRegistrada && loggedIn === 'true') {
+        loginItem.style.display = 'none';
+        profileItem.style.display = 'block';
+        settingsItem.style.display = 'block';
+        dividerItem.style.display = 'block';
+        logoutItem.style.display = 'block';
+        vagasNavItem.style.display = 'block';
     } else {
-        // Exibe uma mensagem de erro se os campos estiverem vazios
-        alert("Por favor, preencha todos os campos.");
+        loginItem.style.display = 'block';
+        profileItem.style.display = 'none';
+        settingsItem.style.display = 'none';
+        dividerItem.style.display = 'none';
+        logoutItem.style.display = 'none';
+        vagasNavItem.style.display = 'none';
     }
 }
 
-// Função para verificar se os dados de login estão armazenados no LocalStorage
-function verificarLogin() {
-    var email = localStorage.getItem('email');
-    var senha = localStorage.getItem('senha');
+// Executar a atualização do dropdown ao carregar a página
+document.addEventListener('DOMContentLoaded', function () {
+    atualizarDropdown();
+});
 
-    if (email && senha) {
-        // Se os dados de login estiverem armazenados, mostra os itens do perfil e configurações, e esconde o login
-        document.getElementById('loginItem').style.display = 'none';
-        document.getElementById('profileItem').style.display = 'block';
-        document.getElementById('settingsItem').style.display = 'block';
-        document.getElementById('dividerItem').style.display = 'block';
-        document.getElementById('logoutItem').style.display = 'block';
+// Event listener para login (simulado)
+document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // Simulação de login bem-sucedido
+    var emailLogin = document.getElementById('email-login').value;
+    var senhaLogin = document.getElementById('senha-login').value;
+
+    var emailRegistrado = localStorage.getItem('email');
+    var senhaRegistrada = localStorage.getItem('senha');
+
+    if (emailLogin === emailRegistrado && senhaLogin === senhaRegistrada) {
+        alert('Login bem-sucedido!');
+
+        // Armazenar o estado de login no localStorage
+        localStorage.setItem('loggedIn', 'true');
+
+        // Atualizar dropdown
+        atualizarDropdown();
+
+        // Redirecionar para a página principal ou a página que desejar
+        window.location.href = 'index.html';
     } else {
-        // Se os dados de login não estiverem armazenados, mostra apenas o login e esconde os itens do perfil e configurações
-        document.getElementById('loginItem').style.display = 'block';
-        document.getElementById('profileItem').style.display = 'none';
-        document.getElementById('settingsItem').style.display = 'none';
-        document.getElementById('dividerItem').style.display = 'none';
-        document.getElementById('logoutItem').style.display = 'none';
+        alert('Email ou senha incorretos.');
     }
-}
+});
 
-// Função para fazer logout e limpar os dados do LocalStorage
-function fazerLogout() {
+// Event listener para logout
+document.getElementById('logoutItem').addEventListener('click', function () {
+    // Remover os dados do localStorage
     localStorage.removeItem('email');
     localStorage.removeItem('senha');
-    window.location.href = "login.html"; // Redireciona para a página de login
-}
+    localStorage.removeItem('loggedIn');
 
+    // Atualizar dropdown
+    atualizarDropdown();
 
-// Chama a função para verificar o estado do login quando a página é carregada
-window.onload = function () {
-    verificarLogin();
-};
+    // Redirecionar para a página de login
+    window.location.href = 'login.html';
+});
 
-// Chama a função para salvar as credenciais quando o formulário for enviado
-document.querySelector('form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Evita o envio do formulário padrão
-    salvarCredenciais();
+// Event listener para o formulário de cadastro
+document.getElementById('registroForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    // Obter valores dos campos de email e senha
+    var email = document.getElementById('email-registro').value;
+    var senha = document.getElementById('senha-registro').value;
+
+    // Armazenar valores no localStorage
+    localStorage.setItem('email', email);
+    localStorage.setItem('senha', senha);
+
+    // Exibir alerta de sucesso
+    alert('Dados armazenados no localStorage com sucesso!');
+
+    // Redirecionar para a página de login
+    window.location.href = 'login.html';
 });

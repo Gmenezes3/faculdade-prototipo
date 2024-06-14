@@ -31,7 +31,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="registro.html">Cadastro</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="vagasNavItem">
                             <a class="nav-link" href="busca-vaga.html">Buscar Vagas</a>
                         </li>
                         <li class="nav-item">
@@ -61,14 +61,13 @@
                         <li id="dividerItem">
                             <hr class="dropdown-divider">
                         </li>
-                        <li id="logoutItem"><a class="dropdown-item" href="login.html"
-                                onclick="fazerLogout()">Logout</a>
-                        </li>
+                        <li id="logoutItem"><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
 
     <main>
         <div class="container mt-5">
@@ -81,12 +80,12 @@
                         <div class="col-md-6 mb-3">
                             <label for="nome" class="form-label">Nome Completo</label>
                             <input type="text" class="form-control" id="nome" name="nome" minlength="15" maxlength="60"
-                                pattern="[a-zA-ZÀ-ÿ\s]+" required>
+                                required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="cpf" class="form-label">CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf"
-                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx">
+                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="xxx.xxx.xxx-xx"
+                                required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="data_nascimento" class="form-label">Data de Nascimento</label>
@@ -95,7 +94,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="gender" class="form-label">Sexo</label>
-                            <select class="form-select" id="gender" name="gender" required>
+                            <select class="form-select" id="genero" name="genero" required>
                                 <option value="" disabled selected></option>
                                 <option value="male">Masculino</option>
                                 <option value="female">Feminino</option>
@@ -110,31 +109,30 @@
                         <div class="col-md-6 mb-3">
                             <label for="telefone_celular" class="form-label">Telefone Celular</label>
                             <input type="tel" class="form-control" id="telefone_celular" name="telefone_celular"
-                                pattern="\(\d{2}\) \d{5}-\d{4}" required>
+                                required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="telefone_fixo" class="form-label">Telefone Fixo</label>
-                            <input type="tel" class="form-control" id="telefone_fixo" name="telefone_fixo"
-                                pattern="\(\d{2}\) \d{4}-\d{4}">
+                            <input type="tel" class="form-control" id="telefone_fixo" name="telefone_fixo">
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email"
+                            <input type="email" class="form-control" id="email-registro" name="email"
                                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                                 title="Por favor, insira um endereço de email válido." required>
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label for="senha" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="senha" name="senha" pattern="[a-zA-Z]{8}"
-                                title="A senha deve ter exatamente 8 caracteres alfabéticos." required>
+                            <input type="password" class="form-control" id="senha-registro" name="senha"
+                                pattern="[a-zA-Z]{8}" title="A senha deve ter exatamente 8 caracteres alfabéticos."
+                                required>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="confirm_senha" class="form-label">Confirmação de Senha</label>
                             <input type="password" class="form-control" id="confirm_senha" name="confirm_senha"
                                 pattern="[a-zA-Z]{8}" title="A senha deve ter exatamente 8 caracteres alfabéticos."
                                 required>
-                            <div class="invalid-feedback">Os campos de senha não coincidem.</div>
                         </div>
                     </div>
                 </fieldset>
@@ -189,13 +187,13 @@
         </div>
     </footer>
 
+    <!--jQuerry via CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!--Javascript e Pooper do Bootstrap via CDN-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <!--jQuerry via CDN-->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <!--Meu Script personalizado-->
     <script src="assets/js/validacao.js"></script>
     <script src="assets/js/cep.js"></script>

@@ -12,3 +12,9 @@ main {
     width: auto;
     height: 2rem;
 }
+
+#map {
+    height: 500px;
+    z-index: 0;
+    /* Garante que o mapa esteja abaixo do dropdown */
+}

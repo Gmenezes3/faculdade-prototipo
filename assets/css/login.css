@@ -1,14 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
+
 main {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto';
+}
+
+.navbar {
+    background-color: #43a0485f;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: #ffff;
 }
 
 .navbar-brand img {
     width: auto;
-    height: 50px;
+    height: 3rem;
 }
 
 .nav-link img {
     width: auto;
     height: 2rem;
+
+}
+
+.dropdown-item:hover {
+    background-color: #43a047;
+    color:#ffff
+}
+#dropdownMenu:hover::after {
+    background-color: #43a047;
+    color:#ffff
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: #0000001f 0px 0px 5px 1px;
+}
+
+.form-control:focus {
+    border-color: #43a047 !important;
+    /* Cor da borda ao focar */
+    box-shadow: 0 0 0 0.2rem rgba(67, 160, 71, 0.25) !important;
+    /* Sombra ao focar */
+}
+
+.btn {
+    background-color: #43a047;
+    border-color: #43a047;
+}
+
+.btn:hover {
+    background-color: #15861b;
+    border-color: #15861b;
+}
+
+.mt-3 a {
+    color: #43a047;
+    text-decoration: none;
+}
+
+.mt-3 a:hover {
+    color: #15861b;
+    text-decoration: underline;
+
 }

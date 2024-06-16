@@ -8,14 +8,34 @@ main {
     font-family: 'Roboto';
 }
 
+.navbar {
+    background-color: #43a0485f;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: #ffff;
+}
+
 .navbar-brand img {
     width: auto;
-    height: 50px;
+    height: 3rem;
 }
 
 .nav-link img {
     width: auto;
     height: 2rem;
+
+}
+
+.dropdown-item:hover {
+    background-color: #43a047;
+    color: #ffff
+}
+
+#dropdownMenu:hover::after {
+    background-color: #43a047;
+    color: #ffff
 }
 
 video {
@@ -61,4 +81,14 @@ video {
     background-color: #93C174;
     font-size: 1.5rem;
     width: 1rem;
+}
+
+h2 {
+    text-align: center;
+    padding: 5rem 0;
+
+}
+
+.card-title {
+    color: #43A047;
 }

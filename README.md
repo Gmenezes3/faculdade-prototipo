@@ -39,5 +39,8 @@ Este projeto foi desenvolvido com base em extensas pesquisas focadas nas dificul
 2. **Typed.js**
 - **Função:** Utilizado para a criação de efeito de maquina de digitação sobre o video da homepage.
 
-3. **AOS.js**
-- **Função:** Utilizado para a criação de de cards e texto irem aparecendo conforme o scroll da página.
+3. **Axios.js**
+- **Função:** Utilizado para para fazer requisições HTTP a servidores quando colocado o endereço no campo de busca
+  
+4. **Leaflet.js**
+- **Função:** Utilizado na criação e manipulação do mapa interativo.

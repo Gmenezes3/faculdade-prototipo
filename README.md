@@ -1,6 +1,6 @@
 # DriveS  
 
-O **DriveS** é uma solução inovadora para facilitar a busca por vagas de estacionamento em áreas urbanas. Com uma interface intuitiva e tecnologias modernas, o sistema permite que os usuários localizem vagas disponíveis em tempo real, otimizando tempo e reduzindo o estresse na hora de estacionar.  
+O **DriveS** é uma solução desenvolvida para facilitar a busca por vagas de estacionamento em áreas urbanas. O sistema permite que os usuários insiram um endereço e visualizem estacionamentos públicos próximos, utilizando um mapa interativo para melhor orientação.  
 
 ## Índice  
 
@@ -8,16 +8,13 @@ O **DriveS** é uma solução inovadora para facilitar a busca por vagas de esta
 - [Funcionalidades por Página](#funcionalidades-por-página)  
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)  
 - [Licença](#licença)  
-- [Sobre](#sobre)  
-- [Contribuição](#contribuição)  
-- [Contato](#contato)  
+- [Sobre](#sobre)
 
 ## Funcionalidades Principais  
 
-- **Monitoramento em Tempo Real**: Veja a disponibilidade de vagas em locais específicos, atualizando as informações continuamente.  
-- **Notificações Instantâneas**: Receba alertas sobre vagas próximas, garantindo praticidade na hora de estacionar.  
-- **Histórico de Disponibilidade**: Consulte registros detalhados para identificar padrões de disponibilidade ao longo do dia ou da semana.  
-- **Mapa Interativo**: Utilize um mapa dinâmico baseado no **Leaflet.js** para visualizar estacionamentos próximos ao endereço pesquisado.  
+- **Busca de Estacionamentos Próximos**: Insira um endereço e visualize estacionamentos públicos disponíveis na região.  
+- **Mapa Interativo**: Exibição dos estacionamentos em um mapa dinâmico baseado no **Leaflet.js**.  
+- **Requisições HTTP**: O sistema utiliza **Axios.js** para buscar informações relacionadas ao endereço inserido.  
 
 ## Funcionalidades por Página  
 
@@ -61,4 +58,5 @@ Este projeto está licenciado sob a Licença MIT. Para mais detalhes, consulte o
 
 ## Sobre  
 
-O DriveS foi desenvolvido com base em extensas pesquisas focadas nas dificuldades enfrentadas pelas pessoas ao buscar vagas de estacionamento nas ruas. Nosso compromisso é oferecer uma solução prática e eficiente para melhorar a disponibilidade e o gerenciamento de vagas, utilizando tecnologias inovadoras.
+O **DriveS** foi desenvolvido por um grupo de alunos como parte de um trabalho acadêmico. Durante o desenvolvimento, identificamos uma grande deficiência na busca por vagas de estacionamento nas áreas urbanas, o que motivou a criação dessa solução. O objetivo do projeto é fornecer uma ferramenta prática e eficiente para ajudar as pessoas a encontrar estacionamentos públicos próximos a um determinado endereço.  
+
